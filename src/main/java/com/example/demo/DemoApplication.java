@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.apache.cxf.ext.logging.LoggingInInterceptor;
+import org.apache.cxf.ext.logging.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -33,6 +35,15 @@ public class DemoApplication {
         JaxWsProxyFactoryBean factoryBean = new JaxWsProxyFactoryBean();
         factoryBean.setServiceClass(CalculatorSoap.class);
         factoryBean.setAddress(url);
+
+        LoggingInInterceptor loggingInInterceptor = new LoggingInInterceptor();
+        loggingInInterceptor.setPrettyLogging(true);
+        factoryBean.getInInterceptors().add(loggingInInterceptor);
+
+        LoggingOutInterceptor loggingOutInterceptor = new LoggingOutInterceptor();
+        loggingOutInterceptor.setPrettyLogging(true);
+        factoryBean.getOutInterceptors().add(loggingOutInterceptor);
+
         return (CalculatorSoap) factoryBean.create();
     }
 

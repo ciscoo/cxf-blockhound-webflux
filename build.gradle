@@ -21,6 +21,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:3.4.2'
 	implementation 'org.apache.cxf:cxf-rt-transports-http-hc:3.4.2'
+	implementation 'org.apache.cxf:cxf-rt-features-logging:3.4.2'
 	implementation 'io.projectreactor:reactor-tools'
 	implementation 'io.projectreactor.tools:blockhound:1.0.4.RELEASE'
 
