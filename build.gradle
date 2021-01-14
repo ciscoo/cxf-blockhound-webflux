@@ -37,6 +37,10 @@ test {
 	useJUnitPlatform()
 }
 
+tasks.withType(Test).configureEach {
+	jvmArgs("-XX:+AllowRedefinitionToAddDeleteMethods")
+}
+
 cxfCodegen {
 	wsdl2java {
 		register("calculator") {
