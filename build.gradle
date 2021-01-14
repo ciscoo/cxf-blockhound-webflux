@@ -49,3 +49,9 @@ cxfCodegen {
 		}
 	}
 }
+
+tasks {
+	compileJava {
+		dependsOn(wsdl2java)
+	}
+}
