@@ -25,6 +25,8 @@ dependencies {
 	implementation 'io.projectreactor:reactor-tools'
 
 	testImplementation 'io.projectreactor.tools:blockhound:1.0.4.RELEASE'
+	testImplementation 'com.github.tomakehurst:wiremock-jre8:2.27.2'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
