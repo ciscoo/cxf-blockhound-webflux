@@ -12,20 +12,12 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import org.tempuri.AddResponse;
 import org.tempuri.CalculatorSoap;
-import reactor.blockhound.BlockHound;
-import reactor.core.publisher.Hooks;
 import reactor.core.publisher.Mono;
-import reactor.tools.agent.ReactorDebugAgent;
 
 import java.util.Collections;
 
 @SpringBootApplication
 public class DemoApplication {
-
-    static {
-//        ReactorDebugAgent.init();
-        BlockHound.install();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
