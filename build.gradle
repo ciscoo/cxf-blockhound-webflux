@@ -23,8 +23,8 @@ dependencies {
 	implementation 'org.apache.cxf:cxf-rt-transports-http-hc:3.4.2'
 	implementation 'org.apache.cxf:cxf-rt-features-logging:3.4.2'
 	implementation 'io.projectreactor:reactor-tools'
-	implementation 'io.projectreactor.tools:blockhound:1.0.4.RELEASE'
 
+	testImplementation 'io.projectreactor.tools:blockhound:1.0.4.RELEASE'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
